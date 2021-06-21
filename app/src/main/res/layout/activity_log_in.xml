@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".log_in"
-    >
+    android:background="#353535"
+    tools:context=".log_in">
 
 
     <ImageView
@@ -72,7 +72,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/emailLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -81,7 +81,7 @@
         android:backgroundTint="#353535"
         android:ems="10"
         android:fontFamily="monospace"
-        android:hint="username"
+        android:hint="email"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textColorHighlight="#353535"
@@ -157,6 +157,19 @@
         app:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#353535"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.63" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
