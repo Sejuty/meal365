@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353535"
+    tools:context=".signup">
+
+    <EditText
+        android:id="@+id/userNameSignUp"
+        android:layout_width="303dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#FFEE32"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="username"
+        android:inputType="textPersonName"
+        android:textColorHint="#FFEE32"
+        android:textColor="#FFEE32"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="303dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#FFEE32"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="email"
+        android:inputType="textPersonName"
+        android:textColorHint="#FFEE32"
+        android:textColor="#FFEE32"
+        app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordSignUp"
+        android:layout_width="303dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#FFEE32"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textColorHint="#FFEE32"
+        android:textColor="#FFEE32"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="303dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="65dp"
+        android:backgroundTint="#FFEE32"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="confirm password"
+        android:inputType="textPassword"
+        android:textColorHint="#FFEE32"
+        android:textColor="#FFEE32"
+        app:layout_constraintBottom_toTopOf="@+id/signupButtonInSignUpPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signupButtonInSignUpPage"
+        android:layout_width="129dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="#FFEE32"
+        android:fontFamily="monospace"
+        android:shadowColor="#D5000000"
+        android:text="sign up"
+        android:textAllCaps="false"
+        android:textColor="#353535"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/loginButtonInSignUpPage"
+        android:layout_width="129dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginRight="288dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#FFEE32"
+        android:fontFamily="monospace"
+        android:shadowColor="#D5000000"
+        android:text="log in"
+        android:textAllCaps="false"
+        android:textColor="#353535"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
