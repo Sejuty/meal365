@@ -34,8 +34,8 @@ public class log_in extends AppCompatActivity {
         signUpButton = findViewById(R.id.signup);
         mEmail=findViewById(R.id.emailLogin);
         mPassword=findViewById(R.id.password);
-        progressBar =findViewById(R.id.progressBar2);
-        fAuth=FirebaseAuth.getInstance();
+         progressBar =findViewById(R.id.progressBar2);
+         fAuth=FirebaseAuth.getInstance();
         Intent homePage = new Intent(log_in.this,homepage.class);
 
 
@@ -66,11 +66,12 @@ public class log_in extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+
                 //authenticate the user
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressBar.setVisibility(View.VISIBLE);
                         if(task.isSuccessful())
                         {
                             Toast.makeText(log_in.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();

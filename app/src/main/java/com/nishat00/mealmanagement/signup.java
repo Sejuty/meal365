@@ -77,11 +77,12 @@ public class signup extends AppCompatActivity {
                     mConfirmPassword.setError("Password doesn't match");
                     return ;
                 }
-                progressBar.setVisibility(View.VISIBLE);
+
                 //when we click the signup button
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressBar.setVisibility(View.VISIBLE);
                         if(task.isSuccessful() )
                         {
                             Toast.makeText(signup.this, "User created", Toast.LENGTH_SHORT).show();
@@ -96,7 +97,7 @@ public class signup extends AppCompatActivity {
                 });
 
 
-            };
+            }
         });
 
         loginButtonSignUpPage.setOnClickListener(new View.OnClickListener() {
