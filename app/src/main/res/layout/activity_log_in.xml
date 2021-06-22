@@ -72,16 +72,16 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/emailLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:layout_marginTop="60dp"
         android:backgroundTint="#353535"
         android:ems="10"
-        android:fontFamily="@font/sulphurpoint"
-        android:hint="username"
+        android:fontFamily="monospace"
+        android:hint="email"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textColorHighlight="#353535"
@@ -96,30 +96,32 @@
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="124dp"
         android:backgroundTint="#353535"
         android:ems="10"
-        android:fontFamily="@font/sulphurpoint"
+        android:fontFamily="monospace"
         android:hint="password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/mainbox"
         app:layout_constraintEnd_toEndOf="@+id/mainbox"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/mainbox" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="169dp"
-        android:layout_marginLeft="169dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="75dp"
-        android:fontFamily="@font/sulphurpoint"
+        android:fontFamily="monospace"
         android:text="forgot password?"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/mainbox"
         app:layout_constraintStart_toStartOf="@+id/mainbox"
-        app:layout_constraintTop_toTopOf="@+id/password" />
+        app:layout_constraintTop_toTopOf="@+id/password"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/login"
@@ -127,7 +129,7 @@
         android:layout_height="55dp"
         android:layout_marginBottom="168dp"
         android:backgroundTint="#353535"
-        android:fontFamily="@font/sulphurpoint"
+        android:fontFamily="monospace"
         android:shadowColor="#D5000000"
         android:text="log in"
         android:textAllCaps="false"
@@ -146,7 +148,7 @@
         android:layout_marginLeft="284dp"
         android:layout_marginBottom="40dp"
         android:backgroundTint="#353535"
-        android:fontFamily="@font/sulphurpoint"
+        android:fontFamily="monospace"
         android:shadowColor="#D5000000"
         android:text="sign up"
         android:textAllCaps="false"
@@ -154,6 +156,15 @@
         app:cornerRadius="15dp"
         app:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="43dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="108dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
