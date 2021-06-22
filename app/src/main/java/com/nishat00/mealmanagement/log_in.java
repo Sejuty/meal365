@@ -81,6 +81,7 @@ public class log_in extends AppCompatActivity {
                         else
                         {
                             Toast.makeText(log_in.this, "Error"+task.getException().getMessage() , Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
                         }
 
                     }

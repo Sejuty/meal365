@@ -90,6 +90,7 @@ public class signup extends AppCompatActivity {
                         else
                         {
                             Toast.makeText(signup.this, "Error"+task.getException().getMessage() , Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
