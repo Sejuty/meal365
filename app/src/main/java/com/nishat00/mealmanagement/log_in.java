@@ -36,14 +36,23 @@ public class log_in extends AppCompatActivity {
         mPassword=findViewById(R.id.password);
         progressBar =findViewById(R.id.progressBar2);
         fAuth=FirebaseAuth.getInstance();
-        Intent homePage = new Intent(log_in.this,homepage.class);
+        //signUpButton = findViewById(R.id.signup);
+
+//        signUpButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent logIntoSignUpPage = new Intent(log_in.this,signup.class);
+//                startActivity(logIntoSignUpPage);
+//            }
+//        });
+
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
+                Intent homePage = new Intent(log_in.this,homepage.class);
 
                 String email = mEmail.getText().toString().trim();
                 String password =mPassword.getText().toString().trim();
