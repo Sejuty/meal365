@@ -67,16 +67,17 @@
         android:soundEffectsEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.933" />
 
     <EditText
         android:id="@+id/emailLogin"
         android:layout_width="225dp"
         android:layout_height="42dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="60dp"
         android:backgroundTint="@color/appBlack"
         android:ems="10"
@@ -94,18 +95,18 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="223dp"
+        android:layout_width="225dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="136dp"
         android:backgroundTint="@color/appBlack"
         android:ems="10"
         android:fontFamily="@font/sulpher_point_light"
         android:hint="password"
         android:inputType="textPassword"
-        android:textColor="#3C3F41"
+        android:textColor="#353535"
         app:layout_constraintBottom_toBottomOf="@+id/mainbox"
         app:layout_constraintEnd_toEndOf="@+id/mainbox"
-        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="@+id/mainbox" />
 
     <TextView
@@ -116,7 +117,7 @@
         android:layout_marginLeft="156dp"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="75dp"
-        android:fontFamily="@font/sulpher_point_light"
+        android:fontFamily="@font/sulpher_point_regular"
         android:text="forgot password?"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/mainbox"
@@ -130,7 +131,7 @@
         android:layout_height="55dp"
         android:layout_marginBottom="168dp"
         android:backgroundTint="#353535"
-        android:fontFamily="monospace"
+        android:fontFamily="@font/sulpher_point_regular"
         android:shadowColor="#D5000000"
         android:text="log in"
         android:textAllCaps="false"
@@ -149,7 +150,7 @@
         android:layout_marginLeft="284dp"
         android:layout_marginBottom="40dp"
         android:backgroundTint="#353535"
-        android:fontFamily="monospace"
+        android:fontFamily="@font/sulpher_point_regular"
         android:shadowColor="#D5000000"
         android:text="sign up"
         android:textAllCaps="false"
