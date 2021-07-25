@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 public class homepage extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView exitFromHome;
+    ImageView exitFromHome,homeToProfile;
     private AlertDialog.Builder alertFromHome;
 
     @Override
@@ -21,8 +21,19 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_homepage);
 
         exitFromHome = findViewById(R.id.goBackFromHome);
+        homeToProfile = findViewById(R.id.homepage_to_profile);
 
         exitFromHome.setOnClickListener(this);
+
+        //by clicking the profile image we will goto my profile
+//        homeToProfile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent toProfile = new Intent(homepage.this,MyProfile.class);
+//                startActivity(toProfile);
+//                finish();
+//            }
+//        });
     }
 
     //start dialog box
@@ -56,4 +67,6 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
         alertDialog.show();
         //ends dialog box
     }
+
+
 }

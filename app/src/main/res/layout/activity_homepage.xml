@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/doodle"
+    android:clickable="false"
     tools:context=".homepage">
 
     <TextView
@@ -32,34 +33,33 @@
         app:srcCompat="@drawable/icon_arrow" />
 
     <TextView
-        android:id="@+id/meal_rate_box"
-        android:layout_width="323dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginLeft="47dp"
-
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
-        android:background="@drawable/home_page_shadow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/noti_box"
         android:layout_width="323dp"
         android:layout_height="178dp"
         android:layout_marginStart="47dp"
         android:layout_marginLeft="47dp"
 
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="284dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
         android:background="@drawable/home_page_shadow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/meal_rate_box"
+        android:layout_width="323dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:background="@drawable/home_page_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,12 +70,12 @@
         android:layout_marginStart="47dp"
         android:layout_marginLeft="47dp"
 
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="472dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
         android:background="@drawable/home_page_shadow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -177,5 +177,33 @@
         app:layout_constraintStart_toStartOf="@+id/member_box"
         app:layout_constraintTop_toTopOf="@+id/member_box"
         app:srcCompat="@drawable/members" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="417dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/appBlack"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/meal_rate_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/homepage_to_profile"
+        android:layout_width="60dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="337dp"
+        android:layout_marginLeft="337dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
