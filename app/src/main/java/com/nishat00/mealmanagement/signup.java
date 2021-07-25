@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class signup extends AppCompatActivity {
 
@@ -23,6 +25,10 @@ public class signup extends AppCompatActivity {
     EditText userName,mEmail,mPassword,mConfirmPassword;
     ProgressBar progressBar;
     FirebaseAuth fAuth;
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
+
 
 
     @Override
@@ -54,6 +60,7 @@ public class signup extends AppCompatActivity {
 
 
                 String email = mEmail.getText().toString().trim();
+                String user= userName.getText().toString().trim();
                 String password =mPassword.getText().toString().trim();
                 String confirmPassword =mConfirmPassword.getText().toString().trim();
                 if(TextUtils.isEmpty(email))
@@ -78,6 +85,10 @@ public class signup extends AppCompatActivity {
                     mConfirmPassword.setError("Password doesn't match");
                     return ;
                 }
+                rootNode=FirebaseDatabase.getInstance();
+                reference=rootNode.getReference("User");
+                UserHelper helperClass=new UserHelper(user,email);
+                reference.child(user).setValue(helperClass);
 
                 //when we click the signup button
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

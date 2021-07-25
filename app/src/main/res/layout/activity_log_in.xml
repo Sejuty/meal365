@@ -81,7 +81,7 @@
         android:backgroundTint="@color/appBlack"
         android:ems="10"
         android:fontFamily="@font/sulpher_point_light"
-        android:hint="email"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:textAllCaps="false"
         android:textColor="@color/appBlack"

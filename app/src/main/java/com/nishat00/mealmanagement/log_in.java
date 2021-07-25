@@ -107,11 +107,19 @@ public class log_in extends AppCompatActivity {
             }
         });
 
+
+//        signUpButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent signUp = new Intent(log_in.this,signup.class);
+//                startActivity(signUp);
+//            }
+//        });
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signUp = new Intent(log_in.this,signup.class);
-                startActivity(signUp);
+                Intent intent =new Intent(log_in.this,signup.class);
+                startActivity(intent);
             }
         });
         forgetPasswordLink.setOnClickListener(new View.OnClickListener() {
