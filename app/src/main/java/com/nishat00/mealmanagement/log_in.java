@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class log_in extends AppCompatActivity {
+    public static String PREFS_NAME="MyPrefsFile";
 
     Button loginButton,signUpButton;
     EditText mEmail,mPassword;
@@ -58,8 +60,14 @@ public class log_in extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //progressBar.setVisibility(View.VISIBLE);
+                SharedPreferences sharedPreferences= getSharedPreferences(log_in.PREFS_NAME,0);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putBoolean("hasLoggedIn",true);
+                editor.commit();
+                startActivity(new Intent(log_in.this,homepage.class));
+                finish();
 
-                Intent homePage = new Intent(log_in.this,homepage.class);
+
 
                 String email = mEmail.getText().toString().trim();
                 String password =mPassword.getText().toString().trim();
@@ -91,7 +99,7 @@ public class log_in extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(log_in.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            startActivity(homePage);
+                            startActivity(new Intent(log_in.this,homepage.class));
                             finish();
 
                         }
