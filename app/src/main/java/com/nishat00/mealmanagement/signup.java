@@ -49,6 +49,7 @@ public class signup extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar.setVisibility(View.VISIBLE);
 
 
 
@@ -82,7 +83,7 @@ public class signup extends AppCompatActivity {
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressBar.setVisibility(View.VISIBLE);
+                        //progressBar.setVisibility(View.VISIBLE);
                         if(task.isSuccessful() )
                         {
                             Toast.makeText(signup.this, "User created", Toast.LENGTH_SHORT).show();

@@ -83,12 +83,14 @@
         android:fontFamily="@font/sulpher_point_light"
         android:hint="email"
         android:inputType="textPersonName"
+        android:textAllCaps="false"
         android:textColor="@color/appBlack"
         android:textColorHighlight="#353535"
         android:textColorLink="@color/black"
         android:textCursorDrawable="@color/black"
         android:textSize="18sp"
         android:typeface="monospace"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="@+id/mainbox"
         app:layout_constraintTop_toTopOf="@+id/boxShadow" />
 
@@ -109,7 +111,7 @@
         app:layout_constraintStart_toStartOf="@+id/mainbox" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -159,14 +161,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        android:layout_width="43dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
