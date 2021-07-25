@@ -1,7 +1,7 @@
 package com.nishat00.mealmanagement;
 
 public class UserHelper {
-    String userName,email;
+    String userName, email;
 
     public UserHelper() {
 

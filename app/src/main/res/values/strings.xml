@@ -2,5 +2,5 @@
     <string name="app_name">meal management</string>
     <string name="alert_title">Meal365</string>
     <string name="alert_message">Do you want to exit?</string>
-    <string name = "phone_no"><u>  01991954786</u></string>
+    <string name="phone_no"><u>  01991954786</u></string>
 </resources>
