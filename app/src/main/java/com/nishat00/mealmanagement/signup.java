@@ -79,6 +79,11 @@ public class signup extends AppCompatActivity {
                     phoneNum.setError("phone number required");
                     return;
                 }
+                if(phone.length()!=11)
+                {
+                    phoneNum.setError("phone number is not correct");
+                    return;
+                }
 
                 if(password.length()<6)
                 {
