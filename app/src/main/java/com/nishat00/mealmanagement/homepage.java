@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -19,6 +20,7 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
 
     ImageView exitFromHome;
     Button homeToProfile;
+    TextView toManagement;
     private AlertDialog.Builder alertFromHome;
 
     @Override
@@ -28,6 +30,16 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
 
         exitFromHome = findViewById(R.id.goBackFromHome);
         homeToProfile=findViewById(R.id.homepage_to_profile);
+        toManagement = findViewById(R.id.noti_box);
+
+        //will go to meal management
+        toManagement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent management = new Intent(homepage.this,MealManagement.class);
+                startActivity(management);
+            }
+        });
 
 
 

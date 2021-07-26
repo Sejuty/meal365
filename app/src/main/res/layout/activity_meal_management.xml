@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@color/appBlack"
     android:orientation="vertical"
     tools:context=".MealManagement">
 
@@ -78,13 +78,14 @@
         android:layout_height="138dp"
         android:layout_marginStart="216dp"
         android:layout_marginLeft="216dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="296dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         app:cardBackgroundColor="#FBEB31"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -142,12 +143,12 @@
         android:id="@+id/meal_cardView"
         android:layout_width="151dp"
         android:layout_height="138dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="96dp"
         app:cardBackgroundColor="#FBEB31"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -189,22 +190,19 @@
         app:layout_constraintStart_toEndOf="@+id/member_minus"
         app:layout_constraintTop_toBottomOf="@+id/meal_cardView" />
 
+
     <Button
         android:id="@+id/meal_minus"
         android:layout_width="77dp"
         android:layout_height="45dp"
-        android:layout_marginStart="292dp"
-        android:layout_marginLeft="292dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:text="-"
         android:textSize="20dp"
         app:backgroundTint="#D8101010"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/meal_plus"
         app:layout_constraintTop_toBottomOf="@+id/meal_cardView" />
-
 
     <TextView
         android:id="@+id/depo_text"
@@ -212,13 +210,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="@font/sulpher_point_regular"
         android:text="Deposite"
-        android:textColor="@color/appBlack"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/depo_count"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lunch" />
 
@@ -246,7 +244,7 @@
         android:layout_marginRight="76dp"
         android:fontFamily="@font/sulpher_point_regular"
         android:text="0.00"
-        android:textColor="@color/appBlack"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/depo_amount"
         app:layout_constraintEnd_toEndOf="parent"
@@ -290,17 +288,17 @@
         android:id="@+id/spend_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="104dp"
         android:fontFamily="@font/sulpher_point_regular"
         android:text="spendings"
-        android:textColor="@color/appBlack"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/depo_text"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/spend_amount"
@@ -325,15 +323,15 @@
         android:id="@+id/spend_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
         android:layout_marginTop="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
         android:fontFamily="@font/sulpher_point_regular"
         android:text="0.00"
-        android:textColor="@color/appBlack"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toEndOf="@+id/spend_text"
         app:layout_constraintTop_toBottomOf="@+id/depo_amount" />
 
@@ -341,8 +339,8 @@
         android:id="@+id/spend_plus"
         android:layout_width="48dp"
         android:layout_height="46dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginLeft="228dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
         android:layout_marginTop="97dp"
         android:text="+"
         android:textSize="20dp"
