@@ -18,7 +18,7 @@
             android:layout_height="350dp"
             android:orientation="vertical">
             <ImageView
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="50dp"
                 android:layout_width="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="100dp"
@@ -163,6 +163,29 @@
                 android:textColor="@color/appBlack"
                 android:textSize="20sp" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/image"/>
+
+            <TextView
+                android:id="@+id/image_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:fontFamily="@font/sulpher_point_regular"
+                android:paddingLeft="20dp"
+                android:text="change photo "
+                android:textColor="@color/appBlack"
+                android:textSize="20sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <Button
@@ -171,7 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="30dp"
         android:background="@color/black"
         android:fontFamily="@font/sulpher_point_regular"
         android:shadowRadius="20"
