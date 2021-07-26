@@ -92,8 +92,8 @@ public class signup extends AppCompatActivity {
                 }
                 rootNode=FirebaseDatabase.getInstance();
                 reference=rootNode.getReference("User");
-                UserHelper helperClass=new UserHelper(user,email);
-                reference.child(user).setValue(helperClass);
+                UserHelper helperClass=new UserHelper(user,email,phone);
+                reference.child(phone).setValue(helperClass);
 
                 //when we click the signup button
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
