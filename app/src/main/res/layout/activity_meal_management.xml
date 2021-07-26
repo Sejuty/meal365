@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/appYellow"
+    android:background="#FFEE32"
     android:orientation="vertical"
     tools:context=".MealManagement">
 
@@ -63,7 +63,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="1dp"
         android:padding="20dp">
 
         <com.google.android.material.card.MaterialCardView

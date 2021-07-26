@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/appBlack"
+    android:background="@color/white"
     tools:context=".Profile"
     android:orientation="vertical">
 
@@ -13,12 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="405dp">
         <LinearLayout
-            android:background="@color/appYellow"
+            android:background="@drawable/gradient_background"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:orientation="vertical">
             <ImageView
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="70dp"
                 android:layout_width="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="100dp"
@@ -31,7 +31,7 @@
                 android:text="Sejuty"
                 android:textColor="@color/appBlack"
                 android:fontFamily="@font/sulpher_point_regular"
-                android:textSize="30sp"/>
+                android:textSize="25sp"/>
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
@@ -47,7 +47,11 @@
             android:layout_width="300dp"
             android:layout_height="120dp"
             android:layout_centerHorizontal="true"
+            app:cardCornerRadius="20dp"
             android:layout_marginTop="275dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp"
+
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,17 +70,17 @@
                         android:text="00"
                         android:layout_marginLeft="55dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="20dp"
                         android:textSize="30sp"
-                        android:textColor="@color/appYellow"
+                        android:textColor="@color/appBlack"
                         android:fontFamily="@font/sulpher_point_regular"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Previous meal count"
-                        android:textSize="15sp"
-                        android:textColor="@color/appYellow"
+                        android:textSize="18sp"
+                        android:textColor="@color/appBlack"
                         android:fontFamily="@font/sulpher_point_light"
                         android:textAlignment="center"
                         android:gravity="center_horizontal" />
@@ -92,17 +96,17 @@
                         android:text="0.00"
                         android:layout_marginLeft="45dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_marginTop="15dp"
-                        android:textSize="35sp"
-                        android:textColor="@color/appYellow"
+                        android:layout_marginTop="20dp"
+                        android:textSize="30sp"
+                        android:textColor="@color/appBlack"
                         android:fontFamily="@font/sulpher_point_regular"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Previous meal deposit"
-                        android:textSize="20sp"
-                        android:textColor="@color/appYellow"
+                        android:textSize="18sp"
+                        android:textColor="@color/appBlack"
                         android:fontFamily="@font/sulpher_point_light"
                         android:textAlignment="center"
                         android:gravity="center_horizontal" />
@@ -135,7 +139,7 @@
                 android:fontFamily="@font/sulpher_point_regular"
                 android:paddingLeft="20dp"
                 android:text="xxx@gmail.com"
-                android:textColor="@color/black"
+                android:textColor="@color/appBlack"
                 android:textSize="20sp" />
         </LinearLayout>
         <LinearLayout
@@ -156,7 +160,7 @@
                 android:fontFamily="@font/sulpher_point_regular"
                 android:paddingLeft="20dp"
                 android:text="+266 225 225"
-                android:textColor="@color/black"
+                android:textColor="@color/appBlack"
                 android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
