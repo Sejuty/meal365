@@ -60,12 +60,7 @@ public class log_in extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //progressBar.setVisibility(View.VISIBLE);
-                SharedPreferences sharedPreferences= getSharedPreferences(log_in.PREFS_NAME,0);
-                SharedPreferences.Editor editor=sharedPreferences.edit();
-                editor.putBoolean("hasLoggedIn",true);
-                editor.commit();
-                startActivity(new Intent(log_in.this,homepage.class));
-                finish();
+
 
 
 
@@ -94,6 +89,8 @@ public class log_in extends AppCompatActivity {
 
 
                 //authenticate the user
+                SharedPreferences sharedPreferences= getSharedPreferences(log_in.PREFS_NAME,0);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -101,6 +98,9 @@ public class log_in extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(log_in.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+
+                            editor.putBoolean("hasLoggedIn",true);
+                            editor.commit();
                             startActivity(new Intent(log_in.this,homepage.class));
                             finish();
 
@@ -112,9 +112,12 @@ public class log_in extends AppCompatActivity {
                         }
 
                     }
+
                 });
 
+
             }
+
         });
 
 

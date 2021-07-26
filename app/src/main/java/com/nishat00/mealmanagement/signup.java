@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class signup extends AppCompatActivity {
 
     Button signUpButton,loginButtonSignUpPage;
-    EditText userName,mEmail,mPassword,mConfirmPassword;
+    EditText userName,mEmail,mPassword,mConfirmPassword,phoneNum;
     FirebaseAuth fAuth;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -37,6 +37,7 @@ public class signup extends AppCompatActivity {
 
         signUpButton = findViewById(R.id.signupButtonInSignUpPage);
         loginButtonSignUpPage = findViewById(R.id.loginButtonInSignUpPage);
+        phoneNum=findViewById(R.id.phoneNum);
         userName = findViewById(R.id.userNameSignUp);
         mEmail =findViewById(R.id.email);
         mPassword =findViewById(R.id.passwordSignUp);
@@ -58,6 +59,7 @@ public class signup extends AppCompatActivity {
 
 
                 String email = mEmail.getText().toString().trim();
+                String phone=phoneNum.getText().toString().trim();
                 String user= userName.getText().toString().trim();
                 String password =mPassword.getText().toString().trim();
                 String confirmPassword =mConfirmPassword.getText().toString().trim();
@@ -71,6 +73,11 @@ public class signup extends AppCompatActivity {
                     mPassword.setError("Password is required!");
                     return ;
 
+                }
+                if(TextUtils.isEmpty(phone))
+                {
+                    phoneNum.setError("phone number required");
+                    return;
                 }
 
                 if(password.length()<6)

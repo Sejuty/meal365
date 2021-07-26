@@ -27,7 +27,7 @@
         android:id="@+id/email"
         android:layout_width="303dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="136dp"
         android:backgroundTint="#FFEE32"
         android:ems="10"
         android:fontFamily="@font/sulpher_point_regular"
@@ -40,10 +40,26 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+        android:id="@+id/phoneNum"
+        android:layout_width="303dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#FFEE32"
+        android:ems="10"
+        android:fontFamily="@font/sulpher_point_regular"
+        android:hint="phone Number"
+        android:inputType="textPersonName"
+        android:textColor="#FFEE32"
+        android:textColorHint="#FFEE32"
+        app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
         android:id="@+id/passwordSignUp"
         android:layout_width="303dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="44dp"
         android:backgroundTint="#FFEE32"
         android:ems="10"
         android:fontFamily="@font/sulpher_point_regular"
