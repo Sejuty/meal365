@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class homepage extends AppCompatActivity implements View.OnClickListener {
@@ -22,7 +23,17 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_homepage);
 
         exitFromHome = findViewById(R.id.goBackFromHome);
-        homeToProfile = findViewById(R.id.homepage_to_profile);
+        homeToProfile=findViewById(R.id.homepage_to_profile);
+        homeToProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(homepage.this,MyProfile.class);
+                startActivity(intent);
+                
+
+            }
+        });
+
 
         exitFromHome.setOnClickListener(this);
 
@@ -36,7 +47,6 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
         });
     }
 
-    //start dialog box
     @Override
     public void onClick(View v) {
         alertFromHome = new AlertDialog.Builder(homepage.this);

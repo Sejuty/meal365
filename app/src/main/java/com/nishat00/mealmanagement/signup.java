@@ -23,7 +23,6 @@ public class signup extends AppCompatActivity {
 
     Button signUpButton,loginButtonSignUpPage;
     EditText userName,mEmail,mPassword,mConfirmPassword;
-    ProgressBar progressBar;
     FirebaseAuth fAuth;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -43,7 +42,6 @@ public class signup extends AppCompatActivity {
         mPassword =findViewById(R.id.passwordSignUp);
         mConfirmPassword=findViewById(R.id.confirmPassword);
         fAuth = FirebaseAuth.getInstance();
-        progressBar=findViewById(R.id.progressBar);
         Intent goToSignUpPageToHomePage = new Intent(signup.this,homepage.class);
         if(fAuth.getCurrentUser()!=null)
         {
@@ -55,7 +53,7 @@ public class signup extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
+
 
 
 
@@ -97,13 +95,13 @@ public class signup extends AppCompatActivity {
                         //progressBar.setVisibility(View.VISIBLE);
                         if(task.isSuccessful() )
                         {
-                            Toast.makeText(signup.this, "User created", Toast.LENGTH_SHORT).show();
-                            startActivity(goToSignUpPageToHomePage);
+                            startActivity(new Intent(signup.this,homepage.class));
+                            finish();
                         }
                         else
                         {
                             Toast.makeText(signup.this, "Error"+task.getException().getMessage() , Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
+
                         }
                     }
                 });
