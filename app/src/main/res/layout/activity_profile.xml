@@ -164,5 +164,19 @@
                 android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="55dp"
+        android:background="@color/black"
+        android:fontFamily="@font/sulpher_point_regular"
+        android:text="logout"
+        android:textAllCaps="false"
+        android:textColor="@color/red"
+        app:backgroundTint="#FFFFFF"
+        android:shadowRadius="20dp"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
 
