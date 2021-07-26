@@ -23,24 +23,28 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_height="100dp"
                 app:srcCompat="@color/appBlack"/>
+
             <TextView
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
+                android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sejuty"
-                android:textColor="@color/appBlack"
-                android:fontFamily="@font/sulpher_point_regular"
-                android:textSize="25sp"/>
-            <TextView
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:hint="Username"
+                android:fontFamily="@font/sulpher_point_regular"
+                android:textColor="@color/appBlack"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/fullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nishat Tafannum"
-                android:textColor="@color/appBlack"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:hint="Fullname"
                 android:fontFamily="@font/sulpher_point_regular"
-                android:textSize="20sp"/>
+                android:textColor="@color/appBlack"
+                android:textSize="20sp" />
 
         </LinearLayout>
         <androidx.cardview.widget.CardView
@@ -133,12 +137,13 @@
                 app:srcCompat="@drawable/email"/>
 
             <TextView
+                android:id="@+id/proEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:hint="Email"
                 android:fontFamily="@font/sulpher_point_regular"
                 android:paddingLeft="20dp"
-                android:text="xxx@gmail.com"
                 android:textColor="@color/appBlack"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -154,12 +159,13 @@
                 app:srcCompat="@drawable/phone"/>
 
             <TextView
+                android:id="@+id/proPhn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:hint="phone"
                 android:fontFamily="@font/sulpher_point_regular"
                 android:paddingLeft="20dp"
-                android:text="+266 225 225"
                 android:textColor="@color/appBlack"
                 android:textSize="20sp" />
         </LinearLayout>

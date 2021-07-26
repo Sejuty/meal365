@@ -11,7 +11,7 @@
         android:id="@+id/userNameSignUp"
         android:layout_width="303dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="44dp"
         android:backgroundTint="#FFEE32"
         android:ems="10"
         android:fontFamily="@font/sulpher_point_regular"
@@ -19,15 +19,15 @@
         android:inputType="textPersonName"
         android:textColor="#FFEE32"
         android:textColorHint="#FFEE32"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/proEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/proEmail"
         android:layout_width="303dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="148dp"
         android:backgroundTint="#FFEE32"
         android:ems="10"
         android:fontFamily="@font/sulpher_point_regular"

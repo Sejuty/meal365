@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -39,7 +38,7 @@ public class signup extends AppCompatActivity {
         loginButtonSignUpPage = findViewById(R.id.loginButtonInSignUpPage);
         phoneNum=findViewById(R.id.phoneNum);
         userName = findViewById(R.id.userNameSignUp);
-        mEmail =findViewById(R.id.email);
+        mEmail =findViewById(R.id.proEmail);
         mPassword =findViewById(R.id.passwordSignUp);
         mConfirmPassword=findViewById(R.id.confirmPassword);
         fAuth = FirebaseAuth.getInstance();
@@ -95,18 +94,20 @@ public class signup extends AppCompatActivity {
                     mConfirmPassword.setError("Password doesn't match");
                     return ;
                 }
-                rootNode=FirebaseDatabase.getInstance();
-                reference=rootNode.getReference("User");
-                UserHelper helperClass=new UserHelper(user,email,phone);
-                reference.child(phone).setValue(helperClass);
+
 
                 //when we click the signup button
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        //progressBar.setVisibility(View.VISIBLE);
+
                         if(task.isSuccessful() )
                         {
+                            rootNode=FirebaseDatabase.getInstance();
+                            reference=rootNode.getReference("User");
+                            UserHelper helperClass=new UserHelper(user,email,phone);
+
+                            reference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(helperClass);
                             startActivity(new Intent(signup.this,homepage.class));
                             finish();
                         }
