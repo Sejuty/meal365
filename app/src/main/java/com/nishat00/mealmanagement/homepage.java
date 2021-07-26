@@ -12,7 +12,8 @@ import android.widget.ImageView;
 
 public class homepage extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView exitFromHome,homeToProfile;
+    ImageView exitFromHome;
+    Button homeToProfile;
     private AlertDialog.Builder alertFromHome;
 
     @Override
@@ -26,14 +27,13 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
         exitFromHome.setOnClickListener(this);
 
         //by clicking the profile image we will goto my profile
-//        homeToProfile.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent toProfile = new Intent(homepage.this,MyProfile.class);
-//                startActivity(toProfile);
-//                finish();
-//            }
-//        });
+      homeToProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toProfile = new Intent(homepage.this,Profile.class);
+                startActivity(toProfile);
+            }
+        });
     }
 
     //start dialog box

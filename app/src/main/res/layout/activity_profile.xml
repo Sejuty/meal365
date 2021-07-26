@@ -177,6 +177,6 @@
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:backgroundTint="#FFFFFF"
-        android:shadowRadius="20dp"/>
+        android:shadowRadius="20"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
 
