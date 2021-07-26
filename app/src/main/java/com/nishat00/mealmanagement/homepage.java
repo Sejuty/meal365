@@ -10,11 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class homepage extends AppCompatActivity implements View.OnClickListener {
 
     ImageView exitFromHome;
     Button homeToProfile;
+    TextView toManagement;
     private AlertDialog.Builder alertFromHome;
 
     @Override
@@ -24,13 +26,14 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
 
         exitFromHome = findViewById(R.id.goBackFromHome);
         homeToProfile=findViewById(R.id.homepage_to_profile);
-        homeToProfile.setOnClickListener(new View.OnClickListener() {
+        toManagement = findViewById(R.id.noti_box);
+
+        //will go to meal management
+        toManagement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(homepage.this,MyProfile.class);
-                startActivity(intent);
-                
-
+                Intent management = new Intent(homepage.this,MealManagement.class);
+                startActivity(management);
             }
         });
 

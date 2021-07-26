@@ -4,21 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/doodle"
+    android:background="@color/appBlack"
     android:clickable="false"
     tools:context=".homepage">
-
-    <TextView
-        android:id="@+id/background"
-        android:layout_width="413dp"
-        android:layout_height="731dp"
-        android:background="#9EFFEE32"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/goBackFromHome"
@@ -33,51 +21,58 @@
         app:srcCompat="@drawable/icon_arrow" />
 
     <TextView
-        android:id="@+id/noti_box"
-        android:layout_width="323dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginLeft="47dp"
-
-        android:layout_marginTop="284dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
-        android:background="@drawable/home_page_shadow"
+        android:id="@+id/meal_rate_shadow"
+        android:layout_width="308dp"
+        android:layout_height="221dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/loginboxshadow"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/meal_rate_box" />
+
+    <TextView
+        android:id="@+id/meal_management_shadow"
+        android:layout_width="319dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/loginboxshadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meal_rate_shadow" />
+
+    <TextView
+        android:id="@+id/noti_box"
+        android:layout_width="325dp"
+        android:layout_height="243dp"
+
+        android:background="@drawable/home_page_shadow"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.829" />
 
     <TextView
         android:id="@+id/meal_rate_box"
-        android:layout_width="323dp"
-        android:layout_height="178dp"
+        android:layout_width="316dp"
+        android:layout_height="220dp"
         android:layout_marginStart="47dp"
         android:layout_marginLeft="47dp"
 
-        android:layout_marginTop="96dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
+        android:layout_marginBottom="49dp"
         android:background="@drawable/home_page_shadow"
+        app:layout_constraintBottom_toTopOf="@+id/noti_box"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/member_box"
-        android:layout_width="323dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginLeft="47dp"
-
-        android:layout_marginTop="472dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
-        android:background="@drawable/home_page_shadow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/meal_rate_percentage"
@@ -85,14 +80,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="117dp"
         android:layout_marginLeft="117dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="123dp"
         android:layout_marginRight="123dp"
         android:fontFamily="@font/sulpher_point_bold"
         android:text="0.00"
-        android:textColor="@color/appYellow"
-        android:textSize="50sp"
+        android:textColor="@color/appBlack"
+        android:textSize="70sp"
         app:layout_constraintEnd_toEndOf="@+id/meal_rate_box"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="@+id/meal_rate_box"
         app:layout_constraintTop_toTopOf="@+id/meal_rate_box" />
 
@@ -107,23 +103,23 @@
         android:layout_marginBottom="28dp"
         android:fontFamily="@font/sulpher_point_light"
         android:text="meal rate"
-        android:textColor="@color/appYellow"
-        android:textSize="24sp"
+        android:textColor="@color/appBlack"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/meal_rate_box"
         app:layout_constraintEnd_toEndOf="@+id/meal_rate_box"
         app:layout_constraintStart_toStartOf="@+id/meal_rate_box" />
 
     <ImageView
         android:id="@+id/noti_image"
-        android:layout_width="163dp"
-        android:layout_height="119dp"
+        android:layout_width="241dp"
+        android:layout_height="163dp"
         android:layout_marginStart="77dp"
         android:layout_marginLeft="77dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="83dp"
         android:layout_marginRight="83dp"
         app:layout_constraintEnd_toEndOf="@+id/noti_box"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="@+id/noti_box"
         app:layout_constraintTop_toTopOf="@+id/noti_box"
         app:srcCompat="@drawable/notification" />
@@ -138,72 +134,34 @@
         android:layout_marginRight="90dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sulpher_point_light"
-        android:text="notifications"
-        android:textColor="@color/appYellow"
+        android:text="meal management"
+        android:textColor="@color/appBlack"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/noti_box"
         app:layout_constraintEnd_toEndOf="@+id/noti_box"
         app:layout_constraintStart_toStartOf="@+id/noti_box" />
 
-    <TextView
-        android:id="@+id/members_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginLeft="98dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
-        android:fontFamily="@font/sulpher_point_light"
-        android:text="members"
-        android:textColor="@color/appYellow"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/member_box"
-        app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="@+id/member_box"
-        app:layout_constraintTop_toBottomOf="@+id/members_image" />
-
-    <ImageButton
-        android:id="@+id/members_image"
-        android:layout_width="200dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
-        app:layout_constraintEnd_toEndOf="@+id/member_box"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/member_box"
-        app:layout_constraintTop_toTopOf="@+id/member_box"
-        app:srcCompat="@drawable/members" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="425dp"
         android:layout_height="78dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/appBlack"
+        android:background="#191919"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/meal_rate_box"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homepage_to_profile"
-        android:layout_width="63dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="348dp"
-        android:layout_marginLeft="348dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="61dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/profile"
         app:backgroundTint="@color/appYellow"
-        app:layout_constraintBottom_toTopOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.253" />
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
