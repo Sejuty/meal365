@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class homepage extends AppCompatActivity implements View.OnClickListener {
 
     ImageView exitFromHome;
@@ -24,18 +28,11 @@ public class homepage extends AppCompatActivity implements View.OnClickListener 
 
         exitFromHome = findViewById(R.id.goBackFromHome);
         homeToProfile=findViewById(R.id.homepage_to_profile);
-        homeToProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(homepage.this,MyProfile.class);
-                startActivity(intent);
-                
 
-            }
-        });
 
 
         exitFromHome.setOnClickListener(this);
+
 
         //by clicking the profile image we will goto my profile
       homeToProfile.setOnClickListener(new View.OnClickListener() {

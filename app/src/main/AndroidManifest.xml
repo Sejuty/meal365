@@ -13,7 +13,6 @@
         android:theme="@style/Theme.MealManagement">
         <activity android:name=".MealManagement"></activity>
         <activity android:name=".Profile" />
-        <activity android:name=".MyProfile" />
         <activity android:name=".homepage" />
         <activity android:name=".signup" />
         <activity android:name=".log_in" />

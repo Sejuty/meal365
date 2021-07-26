@@ -12,7 +12,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +29,6 @@ public class log_in extends AppCompatActivity {
     Button loginButton,signUpButton;
     EditText mEmail,mPassword;
     FirebaseAuth fAuth;
-    //ProgressBar progressBar;
     TextView forgetPasswordLink;
 
     @Override
@@ -42,24 +40,15 @@ public class log_in extends AppCompatActivity {
         signUpButton = findViewById(R.id.signup);
         mEmail=findViewById(R.id.emailLogin);
         mPassword=findViewById(R.id.password);
-        // progressBar =findViewById(R.id.progressBar2);
          fAuth=FirebaseAuth.getInstance();
          forgetPasswordLink =findViewById(R.id.forgotPassword);
-        //signUpButton = findViewById(R.id.signup);
 
-//        signUpButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent logIntoSignUpPage = new Intent(log_in.this,signup.class);
-//                startActivity(logIntoSignUpPage);
-//            }
-//        });
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //progressBar.setVisibility(View.VISIBLE);
+
 
 
 
@@ -121,15 +110,6 @@ public class log_in extends AppCompatActivity {
             }
 
         });
-
-
-//        signUpButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent signUp = new Intent(log_in.this,signup.class);
-//                startActivity(signUp);
-//            }
-//        });
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
